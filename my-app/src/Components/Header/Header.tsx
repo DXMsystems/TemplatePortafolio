@@ -1,13 +1,14 @@
 import React from "react";
 import { Navbar, Container, Col, Row, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
   return (
-    <Container>
+    <Container className="header-container">
       <Row>
         <Col>
-          <div>LOGO</div>
+          <div className="test">LOGO</div>
         </Col>
         <Col>
           <ul>
@@ -18,7 +19,7 @@ const Header = () => {
               <Link to="/trajectory">Trajectory</Link>
             </li>
             <li>
-              <Link to="/contact-uw">Contact Us</Link>
+              <Link to="/contact-us">Contact Us</Link>
             </li>
           </ul>
         </Col>
