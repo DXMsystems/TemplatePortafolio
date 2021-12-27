@@ -1,21 +1,29 @@
 import React from "react";
-import { Navbar, Container } from "react-bootstrap";
+import { Navbar, Container, Col, Row, Nav, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Navbar bg="dark">
-      <Container>
-        <Navbar.Brand href="#home">
-          <img
-            src="/logo.svg"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-            alt="React Bootstrap logo"
-          />
-        </Navbar.Brand>
-      </Container>
-    </Navbar>
+    <Container>
+      <Row>
+        <Col>
+          <div>LOGO</div>
+        </Col>
+        <Col>
+          <ul>
+            <li>
+              <Link to="/about-me">About Me</Link>
+            </li>
+            <li>
+              <Link to="/trajectory">Trajectory</Link>
+            </li>
+            <li>
+              <Link to="/contact-uw">Contact Us</Link>
+            </li>
+          </ul>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
