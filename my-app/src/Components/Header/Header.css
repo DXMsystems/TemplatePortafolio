@@ -1,0 +1,9 @@
+.header-container {
+    background-color: transparent;
+    padding-top: .8em;
+}
+
+.header-menu li{
+    display: inline-block;
+    margin: 0 .5em
+}
