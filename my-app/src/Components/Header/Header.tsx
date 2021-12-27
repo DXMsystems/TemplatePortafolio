@@ -5,13 +5,15 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <Container className="header-container">
+    <div className="header-container">
       <Row>
         <Col>
-          <div className="test">LOGO</div>
+          <div>
+            <Link to="/">LOGO</Link>
+          </div>
         </Col>
         <Col>
-          <ul>
+          <ul className="header-menu">
             <li>
               <Link to="/about-me">About Me</Link>
             </li>
@@ -24,7 +26,7 @@ const Header = () => {
           </ul>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 
