@@ -6,8 +6,10 @@ import "./Home.css"
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-container">
+      <div className="text-container">
       <h1 className="texto">Nombre Apellido</h1>
+      </div>
       <video autoPlay loop muted className="background-video">
         <source src={video} type="video/mp4"/>
       </video>
