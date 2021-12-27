@@ -16,7 +16,9 @@ const Home = () => {
         height:"100%",
         objectFit:"cover",
         transform:"translate(-50%, -50%)",
-        zIndex: "-1"
+        zIndex: "-1",
+        display: "none"
+
       }}>
         <source src={video} type="video/mp4"/>
       </video>
