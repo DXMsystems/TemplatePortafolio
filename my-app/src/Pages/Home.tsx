@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../Components/Header/Header";
 //@ts-ignore
 import video from "../Pages/materials/hacker.mp4";
 import "./Home.css"
-import "./typingEfect/app"
+import typeWritterEffect from "../Pages/typingEfect/app"
 import "./typingEfect/style.css"
 
 const Home = () => {
+
+  useEffect(() => {
+    typeWritterEffect();
+  }, [])
+  
   return (
     <div className="home-container">
       <div className="name-container">

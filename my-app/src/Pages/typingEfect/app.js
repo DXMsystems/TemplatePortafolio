@@ -44,4 +44,4 @@ function typeWritterEffect(){
     type();
 }
 
-typeWritterEffect();
+export default typeWritterEffect;
