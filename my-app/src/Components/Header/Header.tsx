@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Container, Col, Row, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import logo from "../../Pages/materials/logo.png"
 import "./Header.css";
 
 const Header = () => {
@@ -8,20 +9,20 @@ const Header = () => {
     <div className="header-container">
       <Row>
         <Col>
-          <div>
-            <Link to="/">LOGO</Link>
-          </div>
+            <Link to="/">
+              <img src={logo} alt="The cum Machine logo" className="menu-logo" />
+            </Link>
         </Col>
         <Col>
           <ul className="header-menu">
             <li>
-              <Link to="/about-me">About Me</Link>
+              <Link to="/about-me" className="menu-option">About Me</Link>
             </li>
             <li>
-              <Link to="/trajectory">Trajectory</Link>
+              <Link to="/trajectory" className="menu-option">Trajectory</Link>
             </li>
             <li>
-              <Link to="/contact-us">Contact Us</Link>
+              <Link to="/contact-us" className="menu-option">Contact Us</Link>
             </li>
           </ul>
         </Col>
