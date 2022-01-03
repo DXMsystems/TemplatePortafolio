@@ -1,6 +1,6 @@
 .header-container {
     background-color: transparent;
-    padding-top: .8em;
+    padding: 2em 3em;
     position: relative;
     z-index: 5;
 }
@@ -8,4 +8,53 @@
 .header-menu li{
     display: inline-block;
     margin: 0 .5em
+    
 }
+
+.header-menu {
+    display: flex;
+    float: right;
+}
+
+.menu-option {
+    color: #eee;
+    font-family: Poppins,sans-serif;
+    font-size: 1em;
+    padding: 6px;
+    margin: 0;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.menu-option:hover {
+    color: #bbb;
+  
+}
+
+.menu-option:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #eee;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .menu-option:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .menu-logo {
+    padding: .5em;
+    width: 100px;
+  }
