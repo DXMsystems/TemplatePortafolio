@@ -18,7 +18,7 @@ const Home = () => {
       <h1 className="texto">Jorge Sanchez</h1>
       </div>
         <div className="hero">
-          <h1 className="title">I'm a</h1>
+          <h1 className="title">I'm a </h1>
           <h1 className="typewrite"></h1>
         </div>
       <video autoPlay loop muted className="background-video">
