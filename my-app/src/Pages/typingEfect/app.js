@@ -1,6 +1,6 @@
 function typeWritterEffect(){
     //Aqui van las palabras que cambiaran
-    const words = ["Developer", "Freelancer", "Designer", "Professional", "Bug Writer"]
+    const words = ["Developer", "Freelancer", "Designer", "Professional"]
 
     let wordCount = 0;
     let letterCount =0;

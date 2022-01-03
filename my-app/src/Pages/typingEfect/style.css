@@ -21,7 +21,9 @@ body {
 .typewrite {
     position: relative;
 }
-
+.title {
+    white-space: pre;
+}
 .typewrite::after{
     content: '';
     width: 1px;
