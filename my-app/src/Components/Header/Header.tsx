@@ -8,12 +8,12 @@ const Header = () => {
   return (
     <div className="header-container">
       <Row>
-        <Col xs={4}>
+        <Col xs={6}>
             <Link to="/">
-              <img src={logo} alt="The cum Machine logo" className="menu-logo" />
+              <img src={logo} alt="Solutions logo" className="menu-logo" />
             </Link>
         </Col>
-        <Col xs={8}>
+        <Col xs={6}>
           <ul className="header-menu">
             <li>
               <Link to="/about-me" className="menu-option">About Me</Link>

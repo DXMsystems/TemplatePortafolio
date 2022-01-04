@@ -1,6 +1,6 @@
 .header-container {
     background-color: transparent;
-    padding: 2em 3em;
+    padding: 0 3em 1em .5em;
     position: relative;
     z-index: 5;
 }
@@ -13,6 +13,8 @@
 
 .header-menu {
     display: flex;
+    padding-top: 2em;
+    align-items: center;
     float: right;
 }
 
@@ -55,6 +57,5 @@
   }
 
   .menu-logo {
-    padding: .5em;
-    width: 100px;
+    width: 350px;
   }
