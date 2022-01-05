@@ -31,6 +31,11 @@ body {
 	line-height: 1;
 	background-color: #131313;
 }
+
+::selection{
+	background: #009e66;
+}
+
 ol, ul {
 	list-style: none;
 }

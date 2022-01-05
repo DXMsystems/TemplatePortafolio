@@ -22,7 +22,7 @@ const Header = () => {
               <Link to="/trajectory" className="menu-option">Trajectory</Link>
             </li>
             <li>
-              <Link to="/contact-us" className="menu-option">Contact Us</Link>
+              <Link to="/contact-us" className="menu-option">Contact</Link>
             </li>
           </ul>
         </Col>
