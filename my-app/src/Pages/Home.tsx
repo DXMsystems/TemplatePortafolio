@@ -3,7 +3,7 @@ import Header from "../Components/Header/Header";
 //@ts-ignore
 import video from "../Pages/materials/hacker.mp4";
 import "./Home.css";
-import "./Text.css";
+import "../Components/SectionTitle/SectionTitle.css"
 import typeWritterEffect from "../Pages/typingEfect/app";
 import "./typingEfect/style.css";
 
