@@ -18,7 +18,7 @@
   position: relative;
 }
 
-.borde {
+.borde__contact-item {
   border-right: 2px solid #333333;
 }
 
@@ -26,7 +26,7 @@
   font-family: Poppins, sans-serif;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   margin-top: 2px;
   color: #f0f0f0;
   text-align: left;
