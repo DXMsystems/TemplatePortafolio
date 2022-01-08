@@ -1,0 +1,46 @@
+.contactText {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #9f9f9f;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    line-height: 1.95;
+  }
+  
+  .iconos {
+    color: #009e66;
+    margin-bottom: 13px;
+    width: 29.25px;
+    height: 36px;
+    font-size: 36px;
+    margin-top: 16px;
+    padding-right: -50px;
+    position: relative;
+  }
+  .diviciondeAhuevo{
+    width: 10%;
+    padding-right: 1em;
+  }
+  .borde__contact-item {
+    border-left: 2px solid #333333;
+  }
+  
+  .item__info-item {
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 2px;
+    color: #f0f0f0;
+    text-align: left;
+  }
+  
+  .itemDescription {
+    color: #9f9f9f;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    line-height: 1.95;
+  }
+  
