@@ -35,7 +35,7 @@
     text-align: left;
   }
   
-  .itemDescription {
+  .itemDescription, a.itemDescription:hover {
     color: #9f9f9f;
     font-family: Poppins, sans-serif;
     font-size: 14px;
@@ -44,3 +44,14 @@
     line-height: 1.95;
   }
   
+  a.itemDescription {
+    text-decoration: unset;
+  }
+
+  a.itemDescription, a.itemDescription:hover {
+    display: flex;
+  }
+
+  a.itemDescription:hover {
+    text-decoration: underline;
+  }
