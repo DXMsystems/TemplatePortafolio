@@ -4,18 +4,46 @@ import "./ContactForm.css";
 import Anuncio from "./Anuncio";
 
 export default function ContactForm() {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = useState(false);
   const [Name, setName] = useState("");
   const [Mail, setMail] = useState("");
   const [Subject, setSubject] = useState("");
   const [Message, setMessage] = useState("");
 
+  
+  const clearForm = () => {
+    setName('');
+    setSubject('');
+    setMail('');
+    setMessage('');
+  }
+
+  const findFormErrors = () => {
+    if (datos.nombre =="") {
+      
+    }
+
+  }
+
+  let datos = {
+    nombre: '',
+    correo: '',
+    asunto: '',
+    mensaje: ''
+  }
+
+
   const buttonHandler = () => {
-    console.log(Name);
-    console.log(Mail);
-    console.log(Subject);
-    console.log(Message);
+
+    datos.nombre = Name;
+    datos.correo = Mail;
+    datos.asunto = Subject;
+    datos.mensaje = Message;
+    
+    console.log(datos);
+
     setModalShow(true);
+    clearForm();
   };
 
   return (
@@ -28,6 +56,7 @@ export default function ContactForm() {
             {/* NOMBRE */}
             <Form.Group className="mb-3 form-cell" controlId="Nombre">
               <Form.Control
+                type='text'
                 placeholder="Name"
                 value={Name}
                 onChange={(e) => setName(e.target.value)}
@@ -52,6 +81,7 @@ export default function ContactForm() {
           {/* ASUNTO*/}
           <Form.Group className="mb-3 form-cell" controlId="subject">
             <Form.Control
+              type='text'
               placeholder="Subject"
               value={Subject}
               onChange={(e) => setSubject(e.target.value)}
@@ -62,6 +92,7 @@ export default function ContactForm() {
         {/* MENSAJE */}
         <Form.Group className="mb-3 form-cell" controlId="message">
           <Form.Control
+            type='text'
             as="textarea"
             rows={4}
             placeholder="Message"
