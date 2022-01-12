@@ -2,48 +2,65 @@ import React, { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import "./ContactForm.css";
 import Anuncio from "./Anuncio";
+import { isEmpty } from "./FormValidation";
 
 export default function ContactForm() {
+  const ERROR_CLASS = "form-control-error";
+
   const [modalShow, setModalShow] = useState(false);
-  const [Name, setName] = useState("");
-  const [Mail, setMail] = useState("");
-  const [Subject, setSubject] = useState("");
-  const [Message, setMessage] = useState("");
-
-  
-  const clearForm = () => {
-    setName('');
-    setSubject('');
-    setMail('');
-    setMessage('');
-  }
-
-  const findFormErrors = () => {
-    if (datos.nombre =="") {
-      
-    }
-
-  }
+  const [Name, setName] = useState({ value: "", errorClass: "" });
+  const [Mail, setMail] = useState({ value: "", errorClass: "" });
+  const [Subject, setSubject] = useState({ value: "", errorClass: "" });
+  const [Message, setMessage] = useState({ value: "", errorClass: "" });
 
   let datos = {
-    nombre: '',
-    correo: '',
-    asunto: '',
-    mensaje: ''
-  }
+    nombre: "",
+    correo: "",
+    asunto: "",
+    mensaje: "",
+  };
+  
+  const clearForm = () => {
+    setName({ value: "", errorClass: "" });
+    setSubject({ value: "", errorClass: "" });
+    setMail({ value: "", errorClass: "" });
+    setMessage({ value: "", errorClass: "" });
+  };
 
+  const formErrorHandler = () => {
+    let hasError = false;
+    if (isEmpty(Name.value)) {
+      setName({ value: Name.value, errorClass: ERROR_CLASS });
+      hasError = true
+    }
+    if (isEmpty(Mail.value)) {
+      setMail({ value: Mail.value, errorClass: ERROR_CLASS });
+      hasError = true
+    }
+    if (isEmpty(Subject.value)) {
+      setSubject({ value: Subject.value, errorClass: ERROR_CLASS });
+      hasError = true
+    }
+    if (isEmpty(Message.value)) {
+      setMessage({ value: Message.value, errorClass: ERROR_CLASS });
+      hasError = true
+    }
+    return hasError
+  };
+
+  
 
   const buttonHandler = () => {
-
+    if (!formErrorHandler()) {  
+      setModalShow(true);
+      clearForm();    
+    } 
     datos.nombre = Name;
-    datos.correo = Mail;
-    datos.asunto = Subject;
-    datos.mensaje = Message;
-    
-    console.log(datos);
+      datos.correo = Mail;
+      datos.asunto = Subject;
+      datos.mensaje = Message;
 
-    setModalShow(true);
-    clearForm();
+      console.log(datos);
   };
 
   return (
@@ -56,10 +73,16 @@ export default function ContactForm() {
             {/* NOMBRE */}
             <Form.Group className="mb-3 form-cell" controlId="Nombre">
               <Form.Control
-                type='text'
+                type="text"
                 placeholder="Name"
-                value={Name}
-                onChange={(e) => setName(e.target.value)}
+                className={Name.errorClass}
+                value={Name.value}
+                onChange={(e) =>
+                  setName({
+                    value: e.target.value,
+                    errorClass: "",
+                  })
+                }
               />
             </Form.Group>
           </Col>
@@ -70,8 +93,14 @@ export default function ContactForm() {
               <Form.Control
                 type="email"
                 placeholder="Email"
-                value={Mail}
-                onChange={(e) => setMail(e.target.value)}
+                className={Mail.errorClass}
+                value={Mail.value}
+                onChange={(e) =>
+                  setMail({
+                    value: e.target.value,
+                    errorClass: "",
+                  })
+                }
               />
             </Form.Group>
           </Col>
@@ -81,10 +110,16 @@ export default function ContactForm() {
           {/* ASUNTO*/}
           <Form.Group className="mb-3 form-cell" controlId="subject">
             <Form.Control
-              type='text'
+              type="text"
               placeholder="Subject"
-              value={Subject}
-              onChange={(e) => setSubject(e.target.value)}
+              className={Subject.errorClass}
+                value={Subject.value}
+                onChange={(e) =>
+                  setSubject({
+                    value: e.target.value,
+                    errorClass: "",
+                  })
+                }
             />
           </Form.Group>
         </Row>
@@ -92,12 +127,18 @@ export default function ContactForm() {
         {/* MENSAJE */}
         <Form.Group className="mb-3 form-cell" controlId="message">
           <Form.Control
-            type='text'
+            type="text"
             as="textarea"
             rows={4}
             placeholder="Message"
-            value={Message}
-            onChange={(e) => setMessage(e.target.value)}
+            className={Message.errorClass}
+            value={Message.value}
+            onChange={(e) =>
+              setMessage({
+                value: e.target.value,
+                errorClass: "",
+              })
+            }
           />
         </Form.Group>
 

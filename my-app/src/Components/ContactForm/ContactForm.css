@@ -22,10 +22,14 @@
     border-color: unset;
     border-bottom:2px solid #009e66 ;
   }
-  
+
+
   .form-control,.form-control:focus{
     background-color: #161616;
     color: #fff;
+  }
+  .form-control-error {
+    border-bottom:2px solid red;
   }
   
   .form-cell:focus{
