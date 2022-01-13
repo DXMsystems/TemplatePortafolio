@@ -77,3 +77,12 @@
       font-size: 14px;
       font-weight: 550;
   }
+  
+  .h1Hide{
+    visibility: hidden;
+  }
+
+  .h1Show{
+    visibility: visible;
+    color: red;
+  }

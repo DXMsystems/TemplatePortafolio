@@ -6,7 +6,7 @@ import { isEmpty } from "./FormValidation";
 
 export default function ContactForm() {
   const ERROR_CLASS = "form-control-error";
-
+  const [formError, setformError] = useState(false);
   const [modalShow, setModalShow] = useState(false);
   const [Name, setName] = useState({ value: "", errorClass: "" });
   const [Mail, setMail] = useState({ value: "", errorClass: "" });
@@ -19,48 +19,51 @@ export default function ContactForm() {
     asunto: "",
     mensaje: "",
   };
-  
+
   const clearForm = () => {
     setName({ value: "", errorClass: "" });
     setSubject({ value: "", errorClass: "" });
     setMail({ value: "", errorClass: "" });
     setMessage({ value: "", errorClass: "" });
+    setformError(false);
   };
 
   const formErrorHandler = () => {
     let hasError = false;
     if (isEmpty(Name.value)) {
       setName({ value: Name.value, errorClass: ERROR_CLASS });
-      hasError = true
+      hasError = true;
+
     }
     if (isEmpty(Mail.value)) {
       setMail({ value: Mail.value, errorClass: ERROR_CLASS });
-      hasError = true
+      hasError = true;
     }
     if (isEmpty(Subject.value)) {
       setSubject({ value: Subject.value, errorClass: ERROR_CLASS });
-      hasError = true
+      hasError = true;
     }
     if (isEmpty(Message.value)) {
       setMessage({ value: Message.value, errorClass: ERROR_CLASS });
-      hasError = true
+      hasError = true;
     }
-    return hasError
+    if(hasError){
+      setformError(true);
+    }
+    return hasError;
   };
 
-  
-
   const buttonHandler = () => {
-    if (!formErrorHandler()) {  
+    if (!formErrorHandler()) {
       setModalShow(true);
-      clearForm();    
-    } 
+      clearForm();
+    }
     datos.nombre = Name;
-      datos.correo = Mail;
-      datos.asunto = Subject;
-      datos.mensaje = Message;
+    datos.correo = Mail;
+    datos.asunto = Subject;
+    datos.mensaje = Message;
 
-      console.log(datos);
+    console.log(datos);
   };
 
   return (
@@ -113,13 +116,13 @@ export default function ContactForm() {
               type="text"
               placeholder="Subject"
               className={Subject.errorClass}
-                value={Subject.value}
-                onChange={(e) =>
-                  setSubject({
-                    value: e.target.value,
-                    errorClass: "",
-                  })
-                }
+              value={Subject.value}
+              onChange={(e) =>
+                setSubject({
+                  value: e.target.value,
+                  errorClass: "",
+                })
+              }
             />
           </Form.Group>
         </Row>
@@ -142,10 +145,17 @@ export default function ContactForm() {
           />
         </Form.Group>
 
-        {/*  BOTON */}
-        <Button variant="btn" onClick={() => buttonHandler()}>
-          Send Message
-        </Button>
+        <Row>
+          <Col>
+            {/*  BOTON */}
+            <Button variant="btn" onClick={() => buttonHandler()}>
+              Send Message
+            </Button>
+          </Col>
+          <Col>
+            <h1 className={formError?"": "h1Hide"}>Fijate lo que haces pendeja</h1>
+          </Col>
+        </Row>
       </Form>
 
       <Anuncio
