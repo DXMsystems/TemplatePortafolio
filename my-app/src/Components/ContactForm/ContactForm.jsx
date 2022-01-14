@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import "./ContactForm.css";
 import Anuncio from "./Anuncio";
-import { isEmpty } from "./FormValidation";
+import { isEmpty, mailError } from "./FormValidation";
 
 export default function ContactForm() {
   const ERROR_CLASS = "form-control-error";
@@ -12,19 +12,6 @@ export default function ContactForm() {
   const [Mail, setMail] = useState({ value: "", errorClass: "" });
   const [Subject, setSubject] = useState({ value: "", errorClass: "" });
   const [Message, setMessage] = useState({ value: "", errorClass: "" });
-
-  let datos = {
-    nombre: "",
-    correo: "",
-    asunto: "",
-    mensaje: "",
-  };
-
-  const mailError = () => {
-    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return !re.test(Mail.value);
-}
-
 
   const clearForm = () => {
     setName({ value: "", errorClass: "" });
@@ -39,9 +26,8 @@ export default function ContactForm() {
     if (isEmpty(Name.value)) {
       setName({ value: Name.value, errorClass: ERROR_CLASS });
       hasError = true;
-
     }
-    if (isEmpty(Mail.value)||mailError()) {
+    if (isEmpty(Mail.value)||mailError(Mail.value)) {
       setMail({ value: Mail.value, errorClass: ERROR_CLASS });
       hasError = true;
     }
@@ -65,11 +51,6 @@ export default function ContactForm() {
       clearForm();
     }
     mailError();
-
-    datos.nombre = Name;
-    datos.correo = Mail;
-    datos.asunto = Subject;
-    datos.mensaje = Message;
   };
 
   return (
@@ -150,7 +131,6 @@ export default function ContactForm() {
             }
           />
         </Form.Group>
-
         <Row>
           <Col>
             {/*  BOTON */}
@@ -163,7 +143,6 @@ export default function ContactForm() {
           </Col>
         </Row>
       </Form>
-
       <Anuncio
         //@ts-ignore
         show={modalShow}
