@@ -20,6 +20,12 @@ export default function ContactForm() {
     mensaje: "",
   };
 
+  const mailError = () => {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return !re.test(Mail.value);
+}
+
+
   const clearForm = () => {
     setName({ value: "", errorClass: "" });
     setSubject({ value: "", errorClass: "" });
@@ -35,7 +41,7 @@ export default function ContactForm() {
       hasError = true;
 
     }
-    if (isEmpty(Mail.value)) {
+    if (isEmpty(Mail.value)||mailError()) {
       setMail({ value: Mail.value, errorClass: ERROR_CLASS });
       hasError = true;
     }
@@ -58,12 +64,12 @@ export default function ContactForm() {
       setModalShow(true);
       clearForm();
     }
+    mailError();
+
     datos.nombre = Name;
     datos.correo = Mail;
     datos.asunto = Subject;
     datos.mensaje = Message;
-
-    console.log(datos);
   };
 
   return (
@@ -153,7 +159,7 @@ export default function ContactForm() {
             </Button>
           </Col>
           <Col>
-            <h1 className={formError?"": "h1Hide"}>Fijate lo que haces pendeja</h1>
+            <h1 className={formError?"h1Show": "h1Hide"}>Fill all the fills correctly</h1>
           </Col>
         </Row>
       </Form>

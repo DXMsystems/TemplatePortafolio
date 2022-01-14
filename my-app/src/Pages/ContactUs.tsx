@@ -23,7 +23,7 @@ export default function ContactUs() {
             along, Feel free to contact me!
           </p>
           
-          <ContactInfo iconClass="bi-file-person-fill" titulo="Nombre" texto="Jorge Sanchez"/>
+          <ContactInfo iconClass="bi-file-person-fill" titulo="Name" texto="Jorge Sanchez"/>
           <ContactInfo
             iconClass="bi-geo-alt-fill"
             titulo="Location"
