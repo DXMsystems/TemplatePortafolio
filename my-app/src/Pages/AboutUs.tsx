@@ -1,9 +1,15 @@
-import React from 'react'
+import { Container } from "react-bootstrap";
+import SectionTitle from "../Components/SectionTitle/SectionTitle";
 
 export default function AboutUs() {
-    return (
-        <div>
-            <h1>TESTETSTESTE</h1>
-        </div>
-    )
+  return (
+    <div>
+      <Container>
+        <SectionTitle
+          descripcion="Know me"
+          title="About me"
+        />
+      </Container>
+    </div>
+  );
 }

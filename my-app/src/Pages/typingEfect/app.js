@@ -29,7 +29,8 @@ function typeWritterEffect(){
 
         document.querySelector(".typewrite").textContent = currentText;
 
-        timeOut = isDeleting ? 200 : 400;
+        //El primero es el tiempo de borrado y el segundo tiempo de escritura
+        timeOut = isDeleting ? 150 : 150;
 
         if(!isDeleting && currentText.length === currentWord.length){
             timeOut=2000;

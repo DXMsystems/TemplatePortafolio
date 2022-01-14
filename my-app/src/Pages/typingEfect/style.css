@@ -30,7 +30,7 @@ body {
     border-right: 5px solid white;
     height: 100%;
     margin-left: 0.5rem;
-    animation: blink 1s infinite;
+    animation: blink .9s infinite;
 }
 
 @keyframes blink{

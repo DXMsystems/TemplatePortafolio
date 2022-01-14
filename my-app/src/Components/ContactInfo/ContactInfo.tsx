@@ -4,15 +4,23 @@ import "../SectionTitle/SectionTitle.css";
 
 //@ts-ignore
 export default function ContactInfo(props) {
+  const link = !props.mail;
+
   return (
     <>
       <Row>
         <div className="diviciondeAhuevo">
-        <i className={"iconos bi "+ props.iconClass}></i>
+          <i className={"iconos bi " + props.iconClass}></i>
         </div>
         <Col className="borde__contact-item" xs={10}>
           <h1 className="item__info-item">{props.titulo}</h1>
-          <p className="itemDescription">{props.texto}</p>
+          {link ? (
+            <p className="itemDescription">{props.texto}</p>
+          ) : (
+            <a href="mailto:jrgels99@gmail.com" className="itemDescription">
+              {props.texto}
+            </a>
+          )}
         </Col>
       </Row>
     </>

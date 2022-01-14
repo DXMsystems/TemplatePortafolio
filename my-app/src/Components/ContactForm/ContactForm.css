@@ -6,7 +6,7 @@
     line-height: 1.95;
     font-size: 15px;
   }
-  
+
   .btn{
       padding: 10px 26px;
       background-color: #009e66;
@@ -16,19 +16,77 @@
       font-size: 14px;
       font-weight: 550;
   }
-  
+
   .form-control:focus{
     box-shadow: unset;
     border-color: unset;
     border-bottom:2px solid #009e66 ;
   }
-  
+
+
   .form-control,.form-control:focus{
     background-color: #161616;
     color: #fff;
   }
-  
+  .form-control-error {
+    border-bottom:2px solid red;
+  }
+
   .form-cell:focus{
     text-decoration: underline;
     text-decoration-color: #009e66;
+  }
+
+  .modalTitle {
+    background-color: #131313;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5em;
+    font-weight: 1000;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: #131313;
+  }
+
+  .modalBody{
+    background-color: #131313;
+    font-family: Poppins, sans-serif;
+    font-size: 1em;
+    font-weight: 1000;
+    color: #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+
+  .modalFooter{
+    background-color: #131313;
+    font-family: Poppins, sans-serif;
+    color: #fff;
+    border-top: #131313;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+  .modalBoton:hover{
+      background-color: #009e66;
+      border: 1px solid #009e66;
+      color: #000;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 550;
+  }
+
+  .h1Hide{
+    visibility: hidden;
+  }
+
+  .h1Show{
+    color: #9f9f9f;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.95;
+    font-size: 15px;
   }

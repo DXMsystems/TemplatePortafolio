@@ -13,7 +13,7 @@
 
 .header-menu {
     display: flex;
-    padding-top: 2em;
+    padding-top: 2.5%;
     align-items: center;
     float: right;
 }
@@ -57,5 +57,5 @@
   }
 
   .menu-logo {
-    width: 350px;
+    width: 290px;
   }

@@ -23,13 +23,13 @@ export default function ContactUs() {
             along, Feel free to contact me!
           </p>
           
-          <ContactInfo iconClass="bi-file-person-fill" titulo="Nombre" texto="Jorge Sanchez"/>
+          <ContactInfo iconClass="bi-file-person-fill" titulo="Name" texto="Jorge Sanchez"/>
           <ContactInfo
             iconClass="bi-geo-alt-fill"
             titulo="Location"
-            texto="4155 Mann Island, Liverpool, United Kingdom."
+            texto="Ciudad de México, México."
           />
-          <ContactInfo iconClass="bi-send" titulo="Email me" texto="jrgels99@gmail.com"/>
+          <ContactInfo iconClass="bi-send" titulo="Email me" texto="jrgels99@gmail.com" mail={true}/>
           <ContactInfo iconClass="bi-linkedin" titulo="Linkedin" texto="Check out my Linkedin"/>
         </Col>
       </Row>

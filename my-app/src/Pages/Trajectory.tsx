@@ -1,9 +1,12 @@
-import React from 'react'
+import { Container } from "react-bootstrap";
+import SectionTitle from "../Components/SectionTitle/SectionTitle";
 
 export default function Trajectory() {
-    return (
-        <div>
-            <h1></h1>
-        </div>
-    )
+  return (
+    <div>
+      <Container>
+        <SectionTitle descripcion="Check out my Trajectory" title="Trajectory" />
+      </Container>
+    </div>
+  );
 }
