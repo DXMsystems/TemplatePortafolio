@@ -12,14 +12,16 @@ app.get("/", (req, res) => res.send("test"));
 
 app.post(
   "/contact-us",
-  body("name").isLength({ min: 1 }).isAlphanumeric(),
-  body("email").isEmail(),
-  body("sub").isAlphanumeric().isLength( {min : 1} ),
-  body("msg").isLength( { min: 10, max: 500 } ),
+  body("name").trim().isLength({ min: 1 }),
+  body("email").trim().isEmail().normalizeEmail(),
+  body("sub").trim().isLength({ min: 1 }),
+  body("msg").trim().isLength({ min: 10, max: 500 }),
   (req, res) => {
-    errors = validationResult(req)
+    errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() })
+      return res.status(400).json({ errors: errors.array() });
+    } else{
+      return res.status(201).end("Well done hoe!")
     }
   }
 );
