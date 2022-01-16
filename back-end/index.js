@@ -1,9 +1,12 @@
 const express = require("express");
 const res = require("express/lib/response");
+const cors = require('cors')
 const app = express();
 const PORT = 8000;
 
 const { body, validationResult } = require("express-validator");
+
+app.use(cors())
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
