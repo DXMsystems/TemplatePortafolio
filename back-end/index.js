@@ -1,9 +1,14 @@
 const express = require("express");
 const res = require("express/lib/response");
+const cors = require('cors')
 const app = express();
 const PORT = 8000;
 
 const { body, validationResult } = require("express-validator");
+
+var corsOptions = {
+  origin: 'http://localhost:8000',
+}
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -11,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => res.send("test"));
 
 app.post(
-  "/contact-us",
+  "/contact-us", cors(corsOptions), 
   body("name").trim().isLength({ min: 1 }),
   body("email").trim().isEmail().normalizeEmail(),
   body("sub").trim().isLength({ min: 1 }),
