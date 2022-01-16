@@ -12,6 +12,21 @@ export default function ContactForm() {
   const [Mail, setMail] = useState({ value: "", errorClass: "" });
   const [Subject, setSubject] = useState({ value: "", errorClass: "" });
   const [Message, setMessage] = useState({ value: "", errorClass: "" });
+  const url = "http://localhost:8000/contact-us";
+
+  const contactPost = () => {
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name:"jos",
+      email:"fuck@you.com",
+      sub:"bla bla",
+      msg:"gdr drgdr drgdrg drgrd" })
+  };
+
+  fetch(url, requestOptions)
+  .then(response => console.log(response.status))
+  }
 
   const clearForm = () => {
     setName({ value: "", errorClass: "" });
@@ -47,6 +62,7 @@ export default function ContactForm() {
 
   const buttonHandler = () => {
     if (!formErrorHandler()) {
+      contactPost()
       setModalShow(true);
       clearForm();
     }
