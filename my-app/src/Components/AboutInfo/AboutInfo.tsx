@@ -1,9 +1,11 @@
-import React from 'react'
+import "./AboutInfo.css";
 
-export default function AboutInfo() {
-    return (
-        <div>
-            
-        </div>
-    )
+//@ts-ignore
+export default function AboutInfo(props) {
+  return (
+    <>
+      <span className="about-element">{props.titulo}</span>
+      <span>{props.subtitulo}</span>
+    </>
+  );
 }
