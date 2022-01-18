@@ -16,17 +16,18 @@ export default function ContactForm() {
 
   const contactPost = () => {
     const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name:"jos",
-      email:"fuck@you.com",
-      sub:"bla bla",
-      msg:"gdr drgdr drgdrg drgrd" })
-  };
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: Name.value,
+        email: Mail.value,
+        sub: Subject.value,
+        msg: Message.value,
+      }),
+    };
 
-  fetch(url, requestOptions)
-  .then(response => console.log(response.status))
-  }
+    fetch(url, requestOptions).then((response) => console.log(response.status));
+  };
 
   const clearForm = () => {
     setName({ value: "", errorClass: "" });
@@ -42,7 +43,7 @@ export default function ContactForm() {
       setName({ value: Name.value, errorClass: ERROR_CLASS });
       hasError = true;
     }
-    if (isEmpty(Mail.value)||mailError(Mail.value)) {
+    if (isEmpty(Mail.value) || mailError(Mail.value)) {
       setMail({ value: Mail.value, errorClass: ERROR_CLASS });
       hasError = true;
     }
@@ -54,7 +55,7 @@ export default function ContactForm() {
       setMessage({ value: Message.value, errorClass: ERROR_CLASS });
       hasError = true;
     }
-    if(hasError){
+    if (hasError) {
       setformError(true);
     }
     return hasError;
@@ -62,7 +63,7 @@ export default function ContactForm() {
 
   const buttonHandler = () => {
     if (!formErrorHandler()) {
-      contactPost()
+      contactPost();
       setModalShow(true);
       clearForm();
     }
@@ -155,7 +156,9 @@ export default function ContactForm() {
             </Button>
           </Col>
           <Col>
-            <h1 className={formError?"h1Show": "h1Hide"}>Fill all the fills correctly</h1>
+            <h1 className={formError ? "h1Show" : "h1Hide"}>
+              Fill all the fills correctly
+            </h1>
           </Col>
         </Row>
       </Form>

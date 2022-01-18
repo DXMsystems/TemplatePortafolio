@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import Header from "../Components/Header/Header";
+import { useEffect } from "react";
 //@ts-ignore
 import video from "../Pages/materials/hacker.mp4";
 import "./Home.css";
