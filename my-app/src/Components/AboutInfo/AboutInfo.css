@@ -1,8 +1,35 @@
 .about-element {
-    color: #dadada;
-    font-weight: 400;
-    margin-right: 10px;
-    font-size: 15px;
-    font-style: normal;
-    line-height: inherit;
-  }
+  color: #dadada;
+  font-weight: 400;
+  margin-right: 10px;
+  font-size: 15px;
+  font-style: normal;
+  line-height: inherit;
+}
+
+.a-element:hover {
+  color: #9f9f9f;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  line-height: 1.95;
+}
+
+.a-element {
+  text-decoration: unset;
+  color: #009e66;
+}
+
+.a-element,
+.a-element:hover {
+  display: inline-block;
+  color: #009e66;
+}
+
+.a-element:hover {
+  text-decoration: underline;
+  color: #009e66;
+}
+
+.a-element::selection{
+  color: #fff;
+}

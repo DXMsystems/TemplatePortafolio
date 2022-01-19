@@ -14,7 +14,7 @@ export default function AboutUs() {
 
         <div className="info-section">
           <Row>
-            <Col>
+            <Col xs={5}>
               <img src={myPic} className="info-pic" alt="about pic" />
             </Col>
             <Col>

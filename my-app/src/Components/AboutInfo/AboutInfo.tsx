@@ -7,7 +7,7 @@ export default function AboutInfo(props) {
       {props.titulo == "Email:" ? (
         <>
           <span className="about-element">{props.titulo}</span>
-          <a href="mailto:jrgels99@gmail.com" className="about-element">{props.subtitulo}</a>
+          <a href="mailto:jrgels99@gmail.com" className="a-element">{props.subtitulo}</a>
         </>
       ) : (
         <>

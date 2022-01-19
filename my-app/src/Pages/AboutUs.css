@@ -1,6 +1,7 @@
 .info-pic {
   border-radius: 0.25rem;
-  max-width: 100%;
+  max-width: 85%;
+  padding-right: 50px;
   padding: 0.25rem;
 }
 
