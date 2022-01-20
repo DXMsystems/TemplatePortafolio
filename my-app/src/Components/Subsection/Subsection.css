@@ -1,0 +1,21 @@
+.subsection-description {
+  margin-top: 80px;
+  font-size: 15px;
+  text-align: center;
+  color: #9f9f9f;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  line-height: 1.95;
+}
+
+.subsection-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: #f0f0f0;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  line-height: 1.95;
+  margin-bottom: 50px;
+}
