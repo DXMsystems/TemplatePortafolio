@@ -1,4 +1,5 @@
 import { Row, Col, Button, Card } from "react-bootstrap";
+import { saveAs } from "file-saver";
 import SectionTitle from "../Components/SectionTitle/SectionTitle";
 import "./AboutUs.css";
 import myPic from "./materials/info-pic.jpg";
@@ -7,6 +8,15 @@ import Subsection from "../Components/Subsection/Subsection";
 import AboutCard from "../Components/AboutCard/AboutCard";
 
 export default function AboutUs() { 
+
+  const saveFile = () => {
+    saveAs(
+      "http://localhost:8000/about-me/curriculum.pdf",
+      "example.pdf"
+    );
+  };
+
+
 
   return (
     <>
@@ -50,7 +60,7 @@ export default function AboutUs() {
                 </Row>
               </div>
               <div className="bottom-elements">
-                <Button href="http://localhost:3000/about-me/curriculum.pdf" variant="btn">Download CV</Button>
+                <Button variant="btn" onClick={saveFile}>Download CV</Button>
               </div>
             </Col>
           </Row>
