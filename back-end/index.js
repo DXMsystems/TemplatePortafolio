@@ -1,16 +1,17 @@
 const express = require("express");
 const sqlite3 = require("sqlite3").verbose();
+const { body, validationResult } = require("express-validator");
 
 const cors = require('cors')
 const app = express();
 const PORT = 8000;
 
-const { body, validationResult } = require("express-validator");
 
 app.use(cors())
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use('/about-me', express.static('assets'));
 
 app.get("/", (req, res) => res.send("test"));
 
