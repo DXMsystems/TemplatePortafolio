@@ -6,7 +6,8 @@ import AboutInfo from "../Components/AboutInfo/AboutInfo";
 import Subsection from "../Components/Subsection/Subsection";
 import AboutCard from "../Components/AboutCard/AboutCard";
 
-export default function AboutUs() {
+export default function AboutUs() { 
+
   return (
     <>
       <div className="container">
@@ -49,7 +50,7 @@ export default function AboutUs() {
                 </Row>
               </div>
               <div className="bottom-elements">
-                <Button variant="btn">Download CV</Button>
+                <Button href="http://localhost:3000/about-me/curriculum.pdf" variant="btn">Download CV</Button>
               </div>
             </Col>
           </Row>
@@ -60,6 +61,7 @@ export default function AboutUs() {
           description="We offer several IT solutions"
           title="My Services"
         />
+        {/* PARA BUSCAR NUEVOS ICONOS: https://icons.getbootstrap.com/icons/cpu-fill/ */}
         <Row>
           <Col>
             <AboutCard
