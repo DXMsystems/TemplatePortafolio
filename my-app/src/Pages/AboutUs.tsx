@@ -1,9 +1,10 @@
-import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import { Row, Col, Button, Card } from "react-bootstrap";
 import SectionTitle from "../Components/SectionTitle/SectionTitle";
 import "./AboutUs.css";
 import myPic from "./materials/info-pic.jpg";
 import AboutInfo from "../Components/AboutInfo/AboutInfo";
 import Subsection from "../Components/Subsection/Subsection";
+import AboutCard from "../Components/AboutCard/AboutCard";
 
 export default function AboutUs() {
   return (
@@ -48,54 +49,64 @@ export default function AboutUs() {
                 </Row>
               </div>
               <div className="bottom-elements">
-                <Button variant="btn">
-                  Download CV
-                </Button>
+                <Button variant="btn">Download CV</Button>
               </div>
             </Col>
           </Row>
           <div className="div-pic"></div>
         </div>
 
-        <Subsection description="Services I offer" title="My Services" />
+        <Subsection
+          description="We offer several IT solutions"
+          title="My Services"
+        />
         <Row>
           <Col>
-            <div className="service">
-            <Card className="card">
-              {/* <Card.Img className="bi bi-code"/> */}
-              <i className="bi bi-code"></i>
-              <Card.Body>
-                <Card.Title className="card-title">Design Trends</Card.Title>
-                <Card.Text className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Card.Text>
-              </Card.Body>
-
-            </Card>
-            </div>
-            
+            <AboutCard
+              iconClass="bi bi-code"
+              cardTitle="Design Trends"
+              cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            />
           </Col>
           <Col>
-            <Card>
-
-            </Card>
+            <AboutCard
+              iconClass="bi bi-wordpress"
+              cardTitle="Web Development"
+              cardText="fdsafdgfdasga"
+            />
           </Col>
           <Col>
-            <Card></Card>
+            <AboutCard
+              iconClass="bi bi-tablet"
+              cardTitle="App Development"
+              cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+            />
           </Col>
         </Row>
 
         <Row>
           <Col>
-          <Card></Card>
+            <AboutCard
+              iconClass="bi bi-robot"
+              cardTitle="Process Automation"
+              cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+            />
           </Col>
           <Col>
-          <Card></Card>
+            <AboutCard
+              iconClass="bi bi-info-circle"
+              cardTitle="IT consulting"
+              cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+            />
           </Col>
           <Col>
-          <Card></Card>
+            <AboutCard
+              iconClass="bi bi-pc-display-horizontal"
+              cardTitle="Ya no se que poner"
+              cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+            />
           </Col>
         </Row>
-
-
       </div>
     </>
   );
