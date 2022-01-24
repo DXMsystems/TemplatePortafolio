@@ -1,6 +1,7 @@
-import { Col, Row } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import SectionTitle from "../Components/SectionTitle/SectionTitle";
 import "./Trajectory.css"
+import TrajectoryCard from "../Components/TrajectoryCard/TrajectoryCard";
 
 export default function Trajectory() {
   return (
@@ -20,7 +21,21 @@ export default function Trajectory() {
 
         <Row>
           <Col>
-            <h1 className="Box-title">Computer Engineering</h1>
+            {/* <div>
+              <Card className="card-tr">
+                <Card.Body>
+                  <span className="item-arrow"></span>
+                  <Card.Title className="cardTit-tr">Computer Science</Card.Title>
+                  <Card.Subtitle className="cardSub-tr">UNAM 2018 - 4eva</Card.Subtitle>
+                  <Card.Text className="cardtxt-tr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</Card.Text>
+                </Card.Body>
+              </Card>
+            </div> */}
+            <TrajectoryCard tit="Computer Engineering" sub="UNAM 2018-2022" txt="No aprendi ni berga jeje xD"/>
+
+          </Col>
+          <Col>
+            
           </Col>
         </Row>
         

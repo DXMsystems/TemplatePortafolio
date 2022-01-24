@@ -1,0 +1,80 @@
+.card-tr {
+  border-bottom: 1px solid #313131;
+  border-left: 3px solid #009e66;
+  color: #9f9f9f;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  --vh: 5.9px;
+  line-height: 1.95;
+  text-align: left;
+}
+
+.cardTit-tr {
+  line-height: 100%;
+  margin-bottom: 21px;
+  color: #f0f0f0;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 0;
+  font-family: Poppins, sans-serif;
+}
+
+.cardSub-tr {
+  margin-bottom: 10px;
+}
+
+.cardtxt-tr {
+  text-align: left;
+}
+
+.item-arrow {
+  left: 0;
+  margin-top: 2px;
+  position: absolute;
+  visibility: visible;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.item-arrow::before {
+  background-color: #009e66;
+  height: 16px;
+  left: 0;
+  width: 16px;
+  content: "";
+  display: block;
+  position: absolute;
+  text-align: left;
+}
+
+.item-arrow::after {
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 8px;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgb(0, 158, 102);
+  border-left-style: solid;
+  border-left-width: 8px;
+  border-right-color: rgba(0, 0, 0, 0);
+  border-right-style: solid;
+  border-right-width: 8px;
+  border-top-color: rgba(0, 0, 0, 0);
+  border-top-style: solid;
+  border-top-width: 8px;
+  box-sizing: border-box;
+  color: rgb(159, 159, 159);
+  content: "";
+  display: block;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  left: 16px;
+  line-height: 27.3px;
+  position: absolute;
+  text-align: left;
+}

@@ -14,11 +14,11 @@
   line-height: 1.95;
 }
 
-.Box-title{
-    line-height: 100%;
-margin-bottom: 9px;
-color: #f0f0f0;
-font-size: 1.25rem;
-font-weight: 500;
-font-family: Poppins,sans-serif;
+.Box-title {
+  line-height: 100%;
+  margin-bottom: 9px;
+  color: #f0f0f0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
 }
