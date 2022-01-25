@@ -1,7 +1,7 @@
 .service {
   padding-left: 15px;
   padding-right: 15px;
-  position: relative;
+
   width: 100%;
   font-family: Poppins, sans-serif;
 }
@@ -43,4 +43,8 @@
   margin-bottom: 22px;
   line-height: 100%;
   text-align: center;
+}
+
+.about-col--icons {
+  margin-bottom: 20px;
 }

@@ -73,21 +73,21 @@ export default function AboutUs() {
         />
         {/* PARA BUSCAR NUEVOS ICONOS: https://icons.getbootstrap.com/icons/cpu-fill/ */}
         <Row>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-code"
               cardTitle="Design Trends"
               cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
             />
           </Col>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-wordpress"
               cardTitle="Web Development"
               cardText="fdsafdgfdasga"
             />
           </Col>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-tablet"
               cardTitle="App Development"
@@ -97,21 +97,21 @@ export default function AboutUs() {
         </Row>
 
         <Row>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-robot"
               cardTitle="Process Automation"
               cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
             />
           </Col>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-info-circle"
               cardTitle="IT consulting"
               cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
             />
           </Col>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-pc-display-horizontal"
               cardTitle="Ya no se que poner"
