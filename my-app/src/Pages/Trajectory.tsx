@@ -1,8 +1,8 @@
 import { Col, Row } from "react-bootstrap";
 import SectionTitle from "../Components/SectionTitle/SectionTitle";
 import "./Trajectory.css";
-import TrajectoryCard from "../Components/TrajectoryCard/TrajectoryCard";
 import Subsection from "../Components/Subsection/Subsection";
+import TrajectoryCard from "../Components/TrajectoryCard/TrajectoryCard";
 import AboutCard from "../Components/AboutCard/AboutCard";
 
 export default function Trajectory() {
@@ -18,14 +18,49 @@ export default function Trajectory() {
           <h1 className="Subtt">Lenguajes & technologies</h1>
           <Row>
             <Col>
-              <AboutCard iconClass="devicon-debian-plain"
-              cardTitle="Debian"
-              cardText="Nos rifamos con tus servidores Debian"/>
+              <AboutCard
+                iconClass="devicon-debian-plain"
+                cardTitle="Debian"
+                cardText="Nos rifamos con tus servidores Debian"
+              />
             </Col>
             <Col>
+              <AboutCard
+                iconClass="devicon-react-original"
+                cardTitle="Web Development"
+                cardText="Nos rifamos haciendo paginas"
+              />
+            </Col>
+            <Col>
+              <AboutCard
+                iconClass="devicon-appwrite-plain"
+                cardTitle="App Development"
+                cardText="Nos rifamos haciendo apps"
+              />
+            </Col>
+          </Row>
 
+          <Row>
+            <Col>
+              <AboutCard
+                iconClass="devicon-python-plain"
+                cardTitle="Python"
+                cardText="Mid/Expert"
+              />
             </Col>
             <Col>
+              <AboutCard
+                iconClass="devicon-docker-plain"
+                cardTitle="App Development"
+                cardText="Nos rifamos haciendo apps"
+              />
+            </Col>
+            <Col>
+              <AboutCard
+                iconClass="devicon-android-plain"
+                cardTitle="App Development"
+                cardText="Nos rifamos haciendo apps"
+              />
             </Col>
           </Row>
         </div>
