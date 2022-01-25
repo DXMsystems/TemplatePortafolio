@@ -1,10 +1,9 @@
-import { Card, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import SectionTitle from "../Components/SectionTitle/SectionTitle";
 import "./Trajectory.css";
 import TrajectoryCard from "../Components/TrajectoryCard/TrajectoryCard";
 import Subsection from "../Components/Subsection/Subsection";
-import TrajectorySkills from "../Components/TrajectorySkills/TrajectorySkills";
-
+import AboutCard from "../Components/AboutCard/AboutCard";
 
 export default function Trajectory() {
   return (
@@ -14,14 +13,24 @@ export default function Trajectory() {
           descripcion="Check out my Trajectory"
           title="Trajectory"
         />
-      
-      <TrajectorySkills url="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" cardTitle="Bootstrap" cardText="High"/>
 
+        <div>
+          <h1 className="Subtt">Lenguajes & technologies</h1>
+          <Row>
+            <Col>
+              <AboutCard iconClass="devicon-debian-plain"
+              cardTitle="Debian"
+              cardText="Nos rifamos con tus servidores Debian"/>
+            </Col>
+            <Col>
 
-        <Subsection
-          description="Some of my achievements"
-          title=" Resume"
-        />
+            </Col>
+            <Col>
+            </Col>
+          </Row>
+        </div>
+
+        <Subsection description="Some of my achievements" title=" Resume" />
         <div className="ed-ex"></div>
         <Row>
           <Col>

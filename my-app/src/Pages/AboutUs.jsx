@@ -12,7 +12,7 @@ export default function AboutUs() {
   const saveFile = () => {
     saveAs(
       "http://localhost:8000/about-me/curriculum.pdf",
-      "example.pdf"
+      "CV.pdf"
     );
   };
 
