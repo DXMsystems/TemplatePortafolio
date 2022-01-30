@@ -7,16 +7,10 @@ import AboutInfo from "../Components/AboutInfo/AboutInfo";
 import Subsection from "../Components/Subsection/Subsection";
 import AboutCard from "../Components/AboutCard/AboutCard";
 
-export default function AboutUs() { 
-
+export default function AboutUs() {
   const saveFile = () => {
-    saveAs(
-      "http://localhost:8000/about-me/curriculum.pdf",
-      "example.pdf"
-    );
+    saveAs("http://localhost:8000/about-me/curriculum.pdf", "CV.pdf");
   };
-
-
 
   return (
     <>
@@ -25,10 +19,12 @@ export default function AboutUs() {
 
         <div className="info-section">
           <Row>
-            <Col xs={5}>
-              <img src={myPic} className="info-pic" alt="about pic" />
+            <Col xs={12} md={6}>
+              <div className="div-pic">
+                <img src={myPic} className="info-pic" alt="about pic" />
+              </div>
             </Col>
-            <Col>
+            <Col xs={12} md={6}>
               <h1 className="green-title">Who am I?</h1>
               <h1 className="subtitulo-blanco">
                 I'm Jorge Sanchez, a Software Engineer and Web Developer
@@ -60,7 +56,9 @@ export default function AboutUs() {
                 </Row>
               </div>
               <div className="bottom-elements">
-                <Button variant="btn" onClick={saveFile}>Download CV</Button>
+                <Button variant="btn" onClick={saveFile}>
+                  Download CV
+                </Button>
               </div>
             </Col>
           </Row>
@@ -73,21 +71,21 @@ export default function AboutUs() {
         />
         {/* PARA BUSCAR NUEVOS ICONOS: https://icons.getbootstrap.com/icons/cpu-fill/ */}
         <Row>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-code"
               cardTitle="Design Trends"
               cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
             />
           </Col>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-wordpress"
               cardTitle="Web Development"
               cardText="fdsafdgfdasga"
             />
           </Col>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-tablet"
               cardTitle="App Development"
@@ -97,21 +95,21 @@ export default function AboutUs() {
         </Row>
 
         <Row>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-robot"
               cardTitle="Process Automation"
               cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
             />
           </Col>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-info-circle"
               cardTitle="IT consulting"
               cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
             />
           </Col>
-          <Col>
+          <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-pc-display-horizontal"
               cardTitle="Ya no se que poner"

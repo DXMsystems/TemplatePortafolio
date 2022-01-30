@@ -1,17 +1,15 @@
 import { Card } from "react-bootstrap";
-import "./AboutCard.css";
+import "./TrajectorySkills.css";
 
 //@ts-ignore
-export default function AboutCard(props) {
-  return (
-
-      <Card className="card service">
-        <i className={"service-icon " + props.iconClass}></i>
+export default function TrajectorySkills(props) {
+  return <div>
+      <Card className="card">
+        <img className={"service-icon "} src={props.url} ></img>
         <Card.Body>
           <Card.Title className="card-title">{props.cardTitle}</Card.Title>
           <Card.Text className="card-text">{props.cardText}</Card.Text>
         </Card.Body>
       </Card>
-   
-  );
+  </div>;
 }
