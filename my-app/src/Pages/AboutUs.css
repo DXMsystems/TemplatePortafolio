@@ -61,3 +61,63 @@
   font-weight: 400;
   line-height: 1.95;
 }
+
+.div-pic {
+  text-align: center;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .div-pic {
+    text-align: center;
+    display: block;
+    padding-bottom: 25px;
+  }
+
+  .info-pic {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0.18);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgba(0, 0, 0, 0.18);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgba(0, 0, 0, 0.18);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgba(0, 0, 0, 0.18);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    color: rgb(159, 159, 159);
+    direction: ltr;
+    display: block;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 200px;
+    line-height: 27.3px;
+    margin-bottom: 32px;
+    margin-left: 65px;
+    margin-right: 65px;
+    margin-top: 0px;
+    max-width: 100%;
+    object-fit: cover;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    text-align: left;
+    visibility: visible;
+    width: 200px;
+  }
+}

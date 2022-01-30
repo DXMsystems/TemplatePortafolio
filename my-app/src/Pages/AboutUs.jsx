@@ -7,16 +7,10 @@ import AboutInfo from "../Components/AboutInfo/AboutInfo";
 import Subsection from "../Components/Subsection/Subsection";
 import AboutCard from "../Components/AboutCard/AboutCard";
 
-export default function AboutUs() { 
-
+export default function AboutUs() {
   const saveFile = () => {
-    saveAs(
-      "http://localhost:8000/about-me/curriculum.pdf",
-      "CV.pdf"
-    );
+    saveAs("http://localhost:8000/about-me/curriculum.pdf", "CV.pdf");
   };
-
-
 
   return (
     <>
@@ -25,10 +19,12 @@ export default function AboutUs() {
 
         <div className="info-section">
           <Row>
-            <Col xs={5}>
-              <img src={myPic} className="info-pic" alt="about pic" />
+            <Col xs={12} md={6}>
+              <div className="div-pic">
+                <img src={myPic} className="info-pic" alt="about pic" />
+              </div>
             </Col>
-            <Col>
+            <Col xs={12} md={6}>
               <h1 className="green-title">Who am I?</h1>
               <h1 className="subtitulo-blanco">
                 I'm Jorge Sanchez, a Software Engineer and Web Developer
@@ -60,7 +56,9 @@ export default function AboutUs() {
                 </Row>
               </div>
               <div className="bottom-elements">
-                <Button variant="btn" onClick={saveFile}>Download CV</Button>
+                <Button variant="btn" onClick={saveFile}>
+                  Download CV
+                </Button>
               </div>
             </Col>
           </Row>
