@@ -58,7 +58,7 @@
   width: 290px;
 }
 
-@media (max-width: 499px) {
+@media (max-width: 810px) {
   .header-container {
     display: none;
   }
