@@ -17,21 +17,21 @@ export default function Trajectory() {
         <div>
           <h1 className="Subtt">Lenguajes & technologies</h1>
           <Row>
-            <Col>
+            <Col className="about-col--icons">
               <AboutCard
                 iconClass="devicon-debian-plain"
                 cardTitle="Debian"
                 cardText="Nos rifamos con tus servidores Debian"
               />
             </Col>
-            <Col>
+            <Col className="about-col--icons">
               <AboutCard
                 iconClass="devicon-react-original"
                 cardTitle="Web Development"
                 cardText="Nos rifamos haciendo paginas"
               />
             </Col>
-            <Col>
+            <Col className="about-col--icons">
               <AboutCard
                 iconClass="devicon-appwrite-plain"
                 cardTitle="App Development"
@@ -41,21 +41,21 @@ export default function Trajectory() {
           </Row>
 
           <Row>
-            <Col>
+            <Col className="about-col--icons">
               <AboutCard
                 iconClass="devicon-python-plain"
                 cardTitle="Python"
                 cardText="Mid/Expert"
               />
             </Col>
-            <Col>
+            <Col className="about-col--icons">
               <AboutCard
                 iconClass="devicon-docker-plain"
                 cardTitle="App Development"
                 cardText="Nos rifamos haciendo apps"
               />
             </Col>
-            <Col>
+            <Col className="about-col--icons">
               <AboutCard
                 iconClass="devicon-android-plain"
                 cardTitle="App Development"
@@ -77,14 +77,14 @@ export default function Trajectory() {
         </Row>
 
         <Row>
-          <Col>
-            <TrajectoryCard
+          <Col className="about-col--icons">
+            <TrajectoryCard 
               tit="Computer Engineering"
               sub="UNAM 2018-2022"
               txt="No aprendi ni berga jeje xD"
             />
           </Col>
-          <Col>
+          <Col className="about-col--icons">
             <TrajectoryCard
               tit="Prepa 6"
               sub="UNAM 2018-2022"
@@ -94,14 +94,14 @@ export default function Trajectory() {
         </Row>
 
         <Row>
-          <Col>
+          <Col className="about-col--icons">
             <TrajectoryCard
               tit="Camara que digo?"
               sub="UNAM 2018-2022"
               txt="No aprendi ni berga jeje xD"
             />
           </Col>
-          <Col>
+          <Col className="about-col--icons">
             <TrajectoryCard
               tit="Jeje te menti, no tengo experiencia xD"
               sub="UNAM 2018-2022"

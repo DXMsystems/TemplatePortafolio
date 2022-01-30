@@ -1,7 +1,6 @@
 .service {
-  padding-left: 15px;
-  padding-right: 15px;
-
+  padding: 16px 15px;
+  height: 100%;
   width: 100%;
   font-family: Poppins, sans-serif;
 }
@@ -13,6 +12,10 @@
   margin-bottom: 30px;
   padding: 38px 42px;
   transition: all 0.15s ease-in-out;
+}
+
+.card__trajectory--skills {
+  padding: 38px 40px 18px;
 }
 
 .card-title {
