@@ -2,6 +2,7 @@ import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import ContactForm from "../Components/ContactForm/ContactForm";
 import SectionTitle from "../Components/SectionTitle/SectionTitle";
 import ContactInfo from "../Components/ContactInfo/ContactInfo";
+import "./ContactUs.css";
 
 export default function ContactUs() {
   return (
@@ -12,11 +13,11 @@ export default function ContactUs() {
       />
 
       <Row>
-        <Col>
+        <Col xs={12} md={6} className="contact-form-col">
           <ContactForm />
         </Col>
 
-        <Col>
+        <Col xs={12} md={6}> 
           <h1 className="subtitulo">Contact Info</h1>
           <p className="contactText">
             Always available for freelance work if the right project comes

@@ -63,3 +63,10 @@ a.itemDescription:hover {
 a.itemDescription::selection{
   color: #fff;
 }
+
+@media (max-width: 810px){
+  .diviciondeAhuevo {
+    width: 10%;
+    padding-right: 3em;
+  }
+}
