@@ -5,6 +5,7 @@ import "./Home.css";
 import "../Components/SectionTitle/SectionTitle.css"
 import typeWritterEffect from "../Pages/typingEfect/app";
 import "./typingEfect/style.css";
+import HamburguerMenu from "../Components/HamburguerMenu/HamburguerMenu";
 
 const Home = () => {
   useEffect(() => {
@@ -13,6 +14,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <HamburguerMenu></HamburguerMenu>
       <div className="name-container">
         <h1 className="titulo">Jorge Sanchez</h1>
       </div>

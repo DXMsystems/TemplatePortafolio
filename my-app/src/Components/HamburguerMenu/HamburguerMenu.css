@@ -1,0 +1,13 @@
+@media (min-width: 500px){
+    .cel-menu{display: none;}
+}
+
+.cel-menu{
+    background-color: transparent;
+    position: relative;
+    z-index: 5;
+}
+
+.menu-minilogo {
+    width: 150px;
+  }
