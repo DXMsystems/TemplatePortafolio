@@ -3,9 +3,6 @@ const sqlite3 = require("sqlite3").verbose();
 const { body, validationResult } = require("express-validator");
 const db = require("./database.js");
 
-
-const nodemailer = require("nodemailer");
-
 const cors = require("cors");
 const app = express();
 const PORT = 8000;
