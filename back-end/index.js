@@ -3,6 +3,7 @@ const sqlite3 = require("sqlite3").verbose();
 const { body, validationResult } = require("express-validator");
 const db = require("./database.js");
 
+
 const nodemailer = require("nodemailer");
 
 const cors = require("cors");
@@ -14,6 +15,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/about-me", express.static("assets"));
+const root = require('path').join(__dirname, 'build')
+app.use(express.static(root))
+
+
+app.use('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
 
 app.get("/", (req, res) => res.send("test"));
 
