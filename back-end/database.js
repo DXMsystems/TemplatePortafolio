@@ -22,7 +22,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
                 console.log("Table already created")
             }else{
                 // Table just created, creating some rows
-                console.log("B")
+                console.log("Table just created")
             }
         });  
     }

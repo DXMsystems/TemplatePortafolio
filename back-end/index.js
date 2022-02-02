@@ -1,7 +1,6 @@
 const express = require("express");
 const { body, validationResult } = require("express-validator");
 const db = require("./database.js");
-const path = require('path');
 const cors = require("cors");
 const app = express();
 const PORT = 8000;
@@ -10,8 +9,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/about-me", express.static("assets"));
 const root = require('path').join(__dirname, 'build')
+app.use("/about-me", express.static(root));
 app.use(express.static(root))
 
 
@@ -68,5 +67,5 @@ app.post(
 );
 
 app.listen(PORT, () => {
-  console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
+  console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 });
