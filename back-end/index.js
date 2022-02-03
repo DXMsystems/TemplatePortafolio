@@ -1,5 +1,5 @@
-const path = require('path');
 const express = require("express");
+const path = require('path');
 const { body, validationResult } = require("express-validator");
 const db = require("./database.js");
 const cors = require("cors");
@@ -14,19 +14,12 @@ const root = path.join(__dirname, 'build')
 app.use("/about-me", express.static(root));
 app.use(express.static(root))
 
-
-app.use('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'))
-})
-
-app.get("/", (req, res) => res.send("test"));
-
 app.post(
   "/contact-us",
   body("name").trim().isLength({ min: 1 }),
   body("email").trim().isEmail().normalizeEmail(),
   body("sub").trim().isLength({ min: 1 }),
-  body("msg").trim().isLength({ min: 10, max: 500 }),
+  body("msg").trim().isLength({ min: 1, max: 500 }),
   (req, res) => {
     errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -67,6 +60,11 @@ app.post(
     }
   }
 );
+
+
+app.use('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
 
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
