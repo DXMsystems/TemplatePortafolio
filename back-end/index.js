@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require("express");
 const { body, validationResult } = require("express-validator");
 const db = require("./database.js");
@@ -9,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const root = require('path').join(__dirname, 'build')
+const root = path.join(__dirname, 'build')
 app.use("/about-me", express.static(root));
 app.use(express.static(root))
 
@@ -44,6 +45,7 @@ app.post(
         current.getMinutes() +
         ":" +
         current.getSeconds();
+
       let dateTime = cDate + " " + cTime;
 
       const data = {
