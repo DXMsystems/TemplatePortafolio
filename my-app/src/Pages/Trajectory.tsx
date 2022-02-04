@@ -16,6 +16,7 @@ export default function Trajectory() {
 
         <div>
           <h1 className="Subtt">Lenguajes & technologies</h1>
+          {/* Para mas iconos: https://devicon.dev/ */}
           <Row>
             <Col className="about-col--icons">
               <AboutCard

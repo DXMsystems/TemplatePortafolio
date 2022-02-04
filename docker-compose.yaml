@@ -7,4 +7,6 @@ services:
       - 8000:8000
     volumes:
       - /home/jrgels/Developer/TemplatePortafolio/back-end/db.sqlite:/app/db.sqlite
+
+#restart: always
 version: '3'
