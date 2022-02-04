@@ -73,23 +73,23 @@ export default function AboutUs() {
         <Row>
           <Col className="about-col--icons">
             <AboutCard
-              iconClass="bi bi-code"
+              iconClass="bi bi-brush"
               cardTitle="Design Trends"
-              cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              cardText="I can make a design for your website"
             />
           </Col>
           <Col className="about-col--icons">
             <AboutCard
-              iconClass="bi bi-wordpress"
+              iconClass="bi bi-code"
               cardTitle="Web Development"
-              cardText="fdsafdgfdasga"
+              cardText="I have extensive experience in creating web pages"
             />
           </Col>
           <Col className="about-col--icons">
             <AboutCard
               iconClass="bi bi-tablet"
               cardTitle="App Development"
-              cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+              cardText="Do you have an idea for an app? Tell me and I'll help you"
             />
           </Col>
         </Row>

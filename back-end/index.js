@@ -1,8 +1,7 @@
 const express = require("express");
-const sqlite3 = require("sqlite3").verbose();
+const path = require('path');
 const { body, validationResult } = require("express-validator");
 const db = require("./database.js");
-
 const cors = require("cors");
 const app = express();
 const PORT = 8000;
@@ -11,23 +10,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/about-me", express.static("assets"));
-const root = require('path').join(__dirname, 'build')
+const root = path.join(__dirname, 'build')
+app.use("/about-me", express.static(root));
 app.use(express.static(root))
-
-
-app.use('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'))
-})
-
-app.get("/", (req, res) => res.send("test"));
 
 app.post(
   "/contact-us",
   body("name").trim().isLength({ min: 1 }),
   body("email").trim().isEmail().normalizeEmail(),
   body("sub").trim().isLength({ min: 1 }),
-  body("msg").trim().isLength({ min: 10, max: 500 }),
+  body("msg").trim().isLength({ min: 1, max: 500 }),
   (req, res) => {
     errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -46,6 +38,7 @@ app.post(
         current.getMinutes() +
         ":" +
         current.getSeconds();
+
       let dateTime = cDate + " " + cTime;
 
       const data = {
@@ -68,6 +61,11 @@ app.post(
   }
 );
 
+
+app.use('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
+
 app.listen(PORT, () => {
-  console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
+  console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 });
