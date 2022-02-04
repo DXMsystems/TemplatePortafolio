@@ -1,0 +1,10 @@
+#docker run -p 8000:8000 -v /home/jrgels/Developer/TemplatePortafolio/back-end/db.sqlite:/app/db.sqlite def
+
+services:
+  app: 
+    image: def
+    ports:
+      - 8000:8000
+    volumes:
+      - /home/jrgels/Developer/TemplatePortafolio/back-end/db.sqlite:/app/db.sqlite
+version: '3'
