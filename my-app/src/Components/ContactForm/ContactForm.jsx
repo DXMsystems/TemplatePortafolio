@@ -37,6 +37,20 @@ export default function ContactForm() {
     setformError(false);
   };
 
+  const sendTelegramMessage = () => {
+    const token = "5247714498:AAEpgjjDX8RnzodXbIURB_vr69gI1kbpAjk"
+    const chat_id = -520514548
+
+    let my_text = '-Name: '+Name.value+'%0A -Email: '+Mail.value+'%0A -Subject: '+Subject.value+'%0A -Message: '+Message.value;
+    let url='https://api.telegram.org/bot'+token+'/sendMessage?chat_id='+chat_id+'&text='+my_text;
+
+    let api = new XMLHttpRequest();
+    api.open("GET", url, true);
+    api.send();
+
+    console.log("Message successfully sended!");
+  }
+
   const formErrorHandler = () => {
     let hasError = false;
     if (isEmpty(Name.value)) {
@@ -65,6 +79,7 @@ export default function ContactForm() {
     if (!formErrorHandler()) {
       contactPost();
       setModalShow(true);
+      sendTelegramMessage();
       clearForm();
     }
     mailError();
