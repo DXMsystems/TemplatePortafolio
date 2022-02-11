@@ -41,35 +41,27 @@ app.post(
 
       let dateTime = cDate + " " + cTime;
 
-      
-      const data = {
-        name: req.body.name,
-        email: req.body.email,
-        subject: req.body.sub,
-        message: req.body.msg,
-        date: dateTime,
-      };
       //telegram notification
       const my_text =
         "-Name: " +
-        data.name +
+        req.body.name +
         "%0A-Email: " +
-        data.email +
+        req.body.email +
         "%0A-Subject: " +
-        data.subject +
+        req.body.sub +
         "%0A-Message: " +
-        data.message;
+        req.body.msg;
 
         tg.sendNotification(my_text);
       //
       const sql =
         "INSERT INTO Contact (name, email, subject, message, date) VALUES (?,?,?,?,?)";
       const params = [
-        data.name,
-        data.email,
-        data.subject,
-        data.message,
-        data.date,
+        req.body.name,
+        req.body.email,
+        req.body.sub,
+        req.body.msg,
+        dateTime,
       ];
       db.run(sql, params, (err, result) => {
         if (err) {
