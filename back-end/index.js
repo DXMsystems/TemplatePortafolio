@@ -1,18 +1,18 @@
 const express = require("express");
-const path = require('path');
+const path = require("path");
 const { body, validationResult } = require("express-validator");
 const db = require("./database.js");
 const cors = require("cors");
 const app = express();
 const PORT = 8000;
-
+const tg = require("./telegram")
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const root = path.join(__dirname, 'build')
+const root = path.join(__dirname, "build");
 app.use("/about-me", express.static(root));
-app.use(express.static(root))
+app.use(express.static(root));
 
 app.post(
   "/contact-us",
@@ -41,6 +41,7 @@ app.post(
 
       let dateTime = cDate + " " + cTime;
 
+      
       const data = {
         name: req.body.name,
         email: req.body.email,
@@ -48,23 +49,42 @@ app.post(
         message: req.body.msg,
         date: dateTime,
       };
-      const sql ='INSERT INTO Contact (name, email, subject, message, date) VALUES (?,?,?,?,?)'
-      const params = [data.name, data.email, data.subject, data.message, data.date]
+      //telegram notification
+      const my_text =
+        "-Name: " +
+        data.name +
+        "%0A-Email: " +
+        data.email +
+        "%0A-Subject: " +
+        data.subject +
+        "%0A-Message: " +
+        data.message;
+
+        tg.sendNotification(my_text);
+      //
+      const sql =
+        "INSERT INTO Contact (name, email, subject, message, date) VALUES (?,?,?,?,?)";
+      const params = [
+        data.name,
+        data.email,
+        data.subject,
+        data.message,
+        data.date,
+      ];
       db.run(sql, params, (err, result) => {
-        if (err){
-            res.status(400).json({"error": err.message})
-            return;
+        if (err) {
+          res.status(400).json({ error: err.message });
+          return;
         }
-    });
+      });
       return res.status(201).end("Well done hoe!");
     }
   }
 );
 
-
-app.use('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'))
-})
+app.use("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);

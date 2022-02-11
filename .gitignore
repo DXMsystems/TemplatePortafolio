@@ -24,3 +24,4 @@ yarn-error.log*
 workspace.code-workspace
 back-end/assets/curriculum.pdf
 back-end/db.sqlite
+back-end/.env
