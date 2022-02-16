@@ -12,7 +12,8 @@ export default function ContactForm() {
   const [Mail, setMail] = useState({ value: "", errorClass: "" });
   const [Subject, setSubject] = useState({ value: "", errorClass: "" });
   const [Message, setMessage] = useState({ value: "", errorClass: "" });
-  const url = "http://localhost:8000/contact-us";
+  //const url = "http://localhost:8000/contact-us";
+  const url = window.location.pathname + "/contact-us";
 
   const contactPost = () => {
     const requestOptions = {
