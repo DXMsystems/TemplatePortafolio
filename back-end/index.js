@@ -19,7 +19,7 @@ app.post(
   body("name").trim().isLength({ min: 1 }),
   body("email").trim().isEmail().normalizeEmail(),
   body("sub").trim().isLength({ min: 1 }),
-  body("msg").trim().isLength({ min: 1, max: 500 }),
+  body("msg").trim().isLength({ min: 1, max: 4500 }),
   (req, res) => {
     errors = validationResult(req);
     if (!errors.isEmpty()) {
