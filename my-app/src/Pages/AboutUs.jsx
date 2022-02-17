@@ -9,7 +9,7 @@ import AboutCard from "../Components/AboutCard/AboutCard";
 
 export default function AboutUs() {
   const saveFile = () => {
-    saveAs("http://localhost:8000/about-me/curriculum.pdf", "CV.pdf");
+    saveAs(window.location.pathname + "/curriculum.pdf", "CV.pdf");
   };
 
   return (

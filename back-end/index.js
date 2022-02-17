@@ -10,8 +10,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use("/about-me", express.static(path.join(__dirname, "assets")));
 const root = path.join(__dirname, "build");
-app.use("/about-me", express.static(root));
+
 app.use(express.static(root));
 
 app.post(
