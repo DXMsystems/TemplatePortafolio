@@ -4,8 +4,8 @@ import "../SectionTitle/SectionTitle.css";
 
 //@ts-ignore
 export default function ContactInfo(props) {
-  const link = !props.mail;
-
+  const mail = props.mail;
+  const link = props.link;
   return (
     <>
       <Row>
@@ -14,12 +14,16 @@ export default function ContactInfo(props) {
         </div>
         <Col className="borde__contact-item" xs={10}>
           <h1 className="item__info-item">{props.titulo}</h1>
-          {link ? (
-            <p className="itemDescription">{props.texto}</p>
-          ) : (
+          {mail ? (
             <a href="mailto:jrgels99@gmail.com" className="itemDescription">
               {props.texto}
             </a>
+          ) : link ? (
+            <a href={props.link} className="itemDescription">
+              {props.texto}
+            </a>
+          ) : (
+            <p className="itemDescription">{props.texto}</p>
           )}
         </Col>
       </Row>
