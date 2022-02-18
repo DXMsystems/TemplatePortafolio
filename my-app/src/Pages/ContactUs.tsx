@@ -20,18 +20,14 @@ export default function ContactUs() {
         <Col xs={12} md={6}> 
           <h1 className="subtitulo">Contact Info</h1>
           <p className="contactText">
-            Always available for freelance work if the right project comes
-            along, Feel free to contact me!
+            Always available for freelance work. Feel free to contact me!
           </p>
           
           <ContactInfo iconClass="bi-file-person-fill" titulo="Name" texto="Jorge Sanchez"/>
-          <ContactInfo
-            iconClass="bi-geo-alt-fill"
-            titulo="Location"
-            texto="Ciudad de México, México."
-          />
+          <ContactInfo iconClass="bi-geo-alt-fill" titulo="Location" texto="Mexico City, Mexico."/>
           <ContactInfo iconClass="bi-send" titulo="Email me" texto="jrgels99@gmail.com" mail={true}/>
-          <ContactInfo iconClass="bi-linkedin" titulo="Linkedin" texto="Check out my Linkedin"/>
+          <ContactInfo iconClass="bi-linkedin" titulo="LinkedIn" texto="Check out my Linkedin" link="https://www.linkedin.com/in/jorge-luis-s%C3%A1nchez-ch%C3%A1vez-55ba9322a/"/>
+          <ContactInfo iconClass="bi-github" titulo="GitHub" texto="Check out my GitHub" link="https://github.com/Jrgels"/>
         </Col>
       </Row>
     </Container>
