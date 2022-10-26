@@ -4,12 +4,10 @@ import SectionTitle from "../Components/SectionTitle/SectionTitle";
 import "./AboutUs.css";
 import myPic from "./materials/info-pic.jpg";
 import AboutInfo from "../Components/AboutInfo/AboutInfo";
-import Subsection from "../Components/Subsection/Subsection";
-import AboutCard from "../Components/AboutCard/AboutCard";
 
 export default function AboutUs() {
   const saveFile = () => {
-    saveAs(window.location.pathname + "/curriculum.pdf", "CV.pdf");
+    saveAs(window.location.pathname + "/curriculum.pdf", "Jorge_Luis_Sanchez_Chavez_CV.pdf");
   };
 
   return (
@@ -30,7 +28,7 @@ export default function AboutUs() {
                 I'm Jorge Sanchez, a Software Engineer and Web Developer
               </h1>
               <p className="p-about">
-                I am a freelancer based in Mexico City and i have been building
+                I am a freelancer based in Mexico City and I have been building
                 noteworthy UX/UI designs and websites for years, which comply
                 with the latest design trends. I help convert a vision and an
                 idea into meaningful and useful products. Having a sharp eye for
@@ -40,7 +38,7 @@ export default function AboutUs() {
               <div className="content-info">
                 <Row>
                   <Col>
-                    <AboutInfo titulo="Nombre:" subtitulo="Jorge Sanchez" />
+                    <AboutInfo titulo="Name:" subtitulo="Jorge Sanchez" />
                   </Col>
                   <Col>
                     <AboutInfo titulo="Email:" subtitulo="jrgels99@gmail.com" />
@@ -64,59 +62,6 @@ export default function AboutUs() {
           </Row>
           <div className="div-pic"></div>
         </div>
-
-        <Subsection
-          description="We offer several IT solutions"
-          title="My Services"
-        />
-        {/* PARA BUSCAR NUEVOS ICONOS: https://icons.getbootstrap.com/icons/cpu-fill/ */}
-        <Row>
-          <Col className="about-col--icons">
-            <AboutCard
-              iconClass="bi bi-brush"
-              cardTitle="Design Trends"
-              cardText="I can make a design for your website"
-            />
-          </Col>
-          <Col className="about-col--icons">
-            <AboutCard
-              iconClass="bi bi-code"
-              cardTitle="Web Development"
-              cardText="I have extensive experience in creating web pages"
-            />
-          </Col>
-          <Col className="about-col--icons">
-            <AboutCard
-              iconClass="bi bi-tablet"
-              cardTitle="App Development"
-              cardText="Do you have an idea for an app? Tell me and I'll help you"
-            />
-          </Col>
-        </Row>
-
-        <Row>
-          <Col className="about-col--icons">
-            <AboutCard
-              iconClass="bi bi-robot"
-              cardTitle="Process Automation"
-              cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-            />
-          </Col>
-          <Col className="about-col--icons">
-            <AboutCard
-              iconClass="bi bi-info-circle"
-              cardTitle="IT consulting"
-              cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-            />
-          </Col>
-          <Col className="about-col--icons">
-            <AboutCard
-              iconClass="bi bi-pc-display-horizontal"
-              cardTitle="Ya no se que poner"
-              cardText="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-            />
-          </Col>
-        </Row>
       </div>
     </>
   );

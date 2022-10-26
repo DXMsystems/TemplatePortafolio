@@ -20,23 +20,23 @@ export default function Trajectory() {
           <Row>
             <Col className="about-col--icons">
               <AboutCard
-                iconClass="devicon-debian-plain"
-                cardTitle="Debian"
-                cardText="Nos rifamos con tus servidores Debian"
+                iconClass="devicon-ubuntu-plain"
+                cardTitle="Linux Servers"
+                cardText="Experience with Linux Servers based on Debian/Ubuntu"
               />
             </Col>
             <Col className="about-col--icons">
               <AboutCard
                 iconClass="devicon-react-original"
-                cardTitle="Web Development"
-                cardText="Nos rifamos haciendo paginas"
+                cardTitle="React / React Native"
+                cardText="Solid knowledge for web and app development with React"
               />
             </Col>
             <Col className="about-col--icons">
               <AboutCard
-                iconClass="devicon-appwrite-plain"
-                cardTitle="App Development"
-                cardText="Nos rifamos haciendo apps"
+                iconClass="devicon-javascript-plain"
+                cardTitle="JavaScript"
+                cardText="Experience using JS for Frontend and Programs"
               />
             </Col>
           </Row>
@@ -46,21 +46,21 @@ export default function Trajectory() {
               <AboutCard
                 iconClass="devicon-python-plain"
                 cardTitle="Python"
-                cardText="Mid/Expert"
+                cardText="Experience developing programs with Python"
               />
             </Col>
             <Col className="about-col--icons">
               <AboutCard
                 iconClass="devicon-docker-plain"
-                cardTitle="App Development"
-                cardText="Nos rifamos haciendo apps"
+                cardTitle="Docker"
+                cardText="Experience creating containers, images, docker-compose and dockerfiles"
               />
             </Col>
             <Col className="about-col--icons">
               <AboutCard
                 iconClass="devicon-android-plain"
                 cardTitle="App Development"
-                cardText="Nos rifamos haciendo apps"
+                cardText="Knowledge developing Android and IOS apps with React Native "
               />
             </Col>
           </Row>
@@ -69,27 +69,27 @@ export default function Trajectory() {
         <Subsection description="Some of my achievements" title=" Resume" />
         <div className="ed-ex"></div>
         <Row>
-          <Col>
-            <h1 className="Col-tit">Education</h1>
-          </Col>
-          <Col>
-            <h1 className="Col-tit">Experience</h1>
-          </Col>
+          <h1 className="Col-tit">Education & experience</h1>
         </Row>
 
         <Row>
           <Col className="about-col--icons">
-            <TrajectoryCard 
+            <TrajectoryCard
               tit="Computer Engineering"
-              sub="UNAM 2018-2022"
-              txt="No aprendi ni berga jeje xD"
+              sub="UNAM | FES ARAGON 2018-2022"
+              txt="I have learned: Programming, Networks,
+              Creation of Databases (SQL),
+              Design and implementation of electronic circuits through the use of programmable logic circuits (PIC) and Arduino,
+              Cloud Computing with AWS"
             />
           </Col>
           <Col className="about-col--icons">
             <TrajectoryCard
-              tit="Prepa 6"
-              sub="UNAM 2018-2022"
-              txt="No aprendi ni berga jeje xD"
+              tit="Freelance Project Manager"
+              sub="Web Development | 2021"
+              txt="Responsible for the coordination, planning and implementation of web pages,
+              Responsible of the Front-End development using React JS and TypeScript,
+              I set up Linux servers using Debian, Docker and NGINX"
             />
           </Col>
         </Row>
@@ -97,16 +97,16 @@ export default function Trajectory() {
         <Row>
           <Col className="about-col--icons">
             <TrajectoryCard
-              tit="Camara que digo?"
-              sub="UNAM 2018-2022"
-              txt="No aprendi ni berga jeje xD"
+              tit="Space Instrumentation Laboratory"
+              sub="UNAM | LINX 2022 to date"
+              txt="Development of a satellite simulation environment with Python. Develop an AI Service Deployment System Using Edge Computing and TensorFlow for the CubeSat Nano-SWAI"
             />
           </Col>
           <Col className="about-col--icons">
             <TrajectoryCard
-              tit="Jeje te menti, no tengo experiencia xD"
-              sub="UNAM 2018-2022"
-              txt="No aprendi ni berga jeje xD"
+              tit="Web Development"
+              sub="Sonderu | 2022 to date"
+              txt="Full Stack web development"
             />
           </Col>
         </Row>
