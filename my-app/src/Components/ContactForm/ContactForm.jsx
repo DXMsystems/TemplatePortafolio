@@ -158,7 +158,7 @@ export default function ContactForm() {
           </Col>
           <Col>
             <h1 className={formError ? "h1Show" : "h1Hide"}>
-              Fill all the fills correctly
+              Fill all the fields correctly
             </h1>
           </Col>
         </Row>
