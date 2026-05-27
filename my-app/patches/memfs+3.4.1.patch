@@ -1,0 +1,13 @@
+diff --git a/node_modules/memfs/lib/volume.js b/node_modules/memfs/lib/volume.js
+index 80937a9..9852902 100644
+--- a/node_modules/memfs/lib/volume.js
++++ b/node_modules/memfs/lib/volume.js
+@@ -2044,7 +2044,7 @@ FsReadStream.prototype.close = function (cb) {
+         }
+         return process_1.default.nextTick(function () { return _this.emit('close'); });
+     }
+-    this.closed = true;
++    try { this.closed = true; } catch(_) {}
+     this._vol.close(this.fd, function (er) {
+         if (er)
+             _this.emit('error', er);
